@@ -65,23 +65,5 @@ public class MaxPQ<Key extends Comparable<Key>>{
 			s =s + pq[i].toString() +" ";
 		return s;
 	}
-	
-//	public static void main(String[] args){
-//		MaxPQ<Integer> pq = new MaxPQ<Integer>(16);
-//		for(int i = 0 ; i < 16; i++){
-//			pq.insert((int)((Math.random() * 10)+3));
-//		}
-//		System.out.println(pq.isEmpty());
-//		System.out.println(pq.size());
-//		System.out.println(pq.toString());
-//		pq.delMax();
-//		System.out.println(pq.toString());
-//		pq.insert(13);
-//		System.out.println(pq.toString());
-//		pq.delMax();
-//		System.out.println(pq.toString());
-//		pq.insert(1);
-//		System.out.println(pq.toString());
-//		
-//	}
+	1
 }
