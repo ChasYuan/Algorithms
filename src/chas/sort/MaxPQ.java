@@ -8,6 +8,7 @@ public class MaxPQ<Key extends Comparable<Key>>{
 		pq = (Key[]) new Comparable[maxN + 1];
 	}
 	
+	
 	public boolean isEmpty(){
 	return N == 0;	
 	}
@@ -65,5 +66,12 @@ public class MaxPQ<Key extends Comparable<Key>>{
 			s =s + pq[i].toString() +" ";
 		return s;
 	}
-	1
+	
+//	public static void main(String[] args){
+//		MaxPQ<Integer> a = new MaxPQ<Integer>(20);
+//		for(int i = 0; i < 20; i++)
+//			a.insert((int)((Math.random() * 10) + 20));
+//		System.out.println(a.toString());
+//	}
+	
 }
