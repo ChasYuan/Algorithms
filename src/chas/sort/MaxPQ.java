@@ -67,11 +67,5 @@ public class MaxPQ<Key extends Comparable<Key>>{
 		return s;
 	}
 	
-//	public static void main(String[] args){
-//		MaxPQ<Integer> a = new MaxPQ<Integer>(20);
-//		for(int i = 0; i < 20; i++)
-//			a.insert((int)((Math.random() * 10) + 20));
-//		System.out.println(a.toString());
-//	}
 	
 }
