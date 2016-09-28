@@ -97,6 +97,22 @@ public class BST<Key extends Comparable<Key>,Value> {
 		else return x;
 	}
 	
+	public Key ceiling(Key key){
+		Node x = ceiling(root,key);
+		if(x == null) return null;
+		return x.key;
+	}
+	
+	private Node ceiling(Node x, Key key){
+		if(x == null ) return null;
+		int cmp = key.compareTo(x.key);
+		if(cmp == 0) return x;
+		if(cmp > 0) return ceiling(x.right, key);
+		Node t = ceiling(x.left,key);
+		if(t != null) return t;
+		else return x;
+	}
+	
 	public Key select(int k){
 		return select(root,k).key;
 	}
@@ -193,20 +209,22 @@ public class BST<Key extends Comparable<Key>,Value> {
 		System.out.println();
 	}
 	
-//	public static void main(String[] args){
-//		BST<String,Integer> bst = new BST<String,Integer>();
-//		System.out.println(bst.get("A"));
-//		bst.put("H",1);
-//		bst.put("A",2);
-//		bst.put("F",3);
-//		bst.put("E",4);
-//		bst.put("L",5);
-//		bst.put("X",6);
-//		bst.put("Q",7);
-//		bst.put("C",8);
-//		bst.put("D",9);
-//		bst.display();
-//		bst.deleteMax();
-//		bst.display();
-//	}
+	public static void main(String[] args){
+		BST<String,Integer> bst = new BST<String,Integer>();
+		System.out.println(bst.get("A"));
+		bst.put("H",1);
+		bst.put("A",2);
+		bst.put("F",3);
+		bst.put("E",4);
+		bst.put("L",5);
+		bst.put("X",6);
+		bst.put("Q",7);
+		bst.put("C",8);
+		bst.put("D",9);
+		bst.display();
+		System.out.println(bst.floor("G"));
+		System.out.println(bst.ceiling("G"));
+		bst.deleteMax();
+		bst.display();
+	}
 }
