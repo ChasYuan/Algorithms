@@ -2,6 +2,7 @@
 =====================
 ###8.10.2016
 [SequentialSearchST](https://github.com/ChasYuan/Algorithms/blob/master/src/chas/search/SequentialSearchST.java)
+
 [SeparateChainingHashST](https://github.com/ChasYuan/Algorithms/blob/master/src/chas/search/SeparateChainingHashST.java)
 ###7.10.2016
 add RedBlackBST(without delete method) [RedBlackBST](https://github.com/ChasYuan/Algorithms/blob/master/src/chas/search/RedBlackBST.java)
