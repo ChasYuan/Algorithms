@@ -1,5 +1,6 @@
 package chas.search;
 
+import chas.datastructure.*;
 public class SequentialSearchST <Key,Value>{
 	private Node first;
 	
@@ -14,6 +15,7 @@ public class SequentialSearchST <Key,Value>{
 			this.next = next;
 		}
 	}
+	
 	
 	public Value get(Key key){
 		for(Node x = first; x != null; x = x.next)
@@ -30,5 +32,13 @@ public class SequentialSearchST <Key,Value>{
 			}
 			first = new Node(key,val,first);
 		}
+	}
+	
+	public Iterable<Key> keys(){
+		Queue<Key> queue = new Queue<Key>();
+		for(Node x = first; x != null; x = x.next){
+			queue.enqueue(x.key);
+		}
+		return queue;
 	}
 }
